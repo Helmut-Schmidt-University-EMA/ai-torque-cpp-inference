@@ -14,12 +14,14 @@ git clone git@github.com:Helmut-Schmidt-University-EMA/ai-torque-cpp-inference.g
 
 Download the appropriate version of **LibTorch** (C++ distribution of PyTorch) from the [official website](https://pytorch.org/get-started/locally/) and extract it.
 
+**Note** : Make sure target system is CPU based not GPU (at least for now)
+
 ### 2. Build the Project
 
 Open a terminal and run:
 
 ```bash
-cd daqmodels
+cd ai-torque-cpp-inference
 mkdir -p build
 cd build
 cmake ..
