@@ -21,5 +21,15 @@ add_executable(daqmodels_exec src/daqmodels.cpp)
 target_link_libraries(daqmodels_exec PRIVATE "${TORCH_LIBRARIES}")
 target_include_directories(daqmodels_exec PUBLIC include "${TORCH_INCLUDE_DIRS}")
 
+if(WIN32)
+    file(GLOB TORCH_DLLS "${TORCH_DIR}/../../../bin/*.dll")
+    foreach(DLL ${TORCH_DLLS})
+        add_custom_command(TARGET daqmodels_exec POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${DLL}
+            $<TARGET_FILE_DIR:daqmodels_exec>)
+    endforeach()
+endif()
+
 # Optional: install the executable
 install(TARGETS daqmodels_exec)
