@@ -52,7 +52,7 @@ download the model after training from the web platform and put in the build fol
 
 1. Build on linux 
 2. create compiled_model folder on daq with 3 files (`model.pt`, `daqmodels_exec`, `torchlibs`)
-3. Download libtorch for cpu and then copy libtorch/lib .so files to `torchlibs` folder 
+3. Download libtorch for linux cpu and then copy libtorch/lib .so files to `torchlibs` folder 
 4. on daq device run this 
 ```sh
 cd compiled_model
