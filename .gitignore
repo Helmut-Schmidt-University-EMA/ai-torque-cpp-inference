@@ -2,3 +2,5 @@
 **/libs
 **/build.zip
 */demo.py
+venv
+**/venv
