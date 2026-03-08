@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="assets/logo.png" alt="HSU AI Torque Sensor Logo" width="250" />
-</p>
+<h1 align="center" style="font-size: 24px; font-weight: bold;">
+  Torque Sensor AI Model Inference
+</h1>
 
 <p align="center">
   C++ inference server for AI-powered torque sensor prediction on NI DAQ devices.
